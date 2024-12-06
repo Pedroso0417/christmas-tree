@@ -8,6 +8,7 @@ button.addEventListener("click", () => {
   message.style.transform = "translateY(0)";
   picture.style.opacity = "1";
 
+  christmasSong.play();
   // Create multiple sparkles for animation
   for (let i = 0; i < 20; i++) {
     const sparkle = document.createElement("div");
