@@ -136,7 +136,7 @@ button:hover {
   margin: 20px auto;
   display: flex;
   justify-content: center;
-  max-width: 60%; /* Limit the width to fit the screen */
+  max-width: 70%; /* Limit the width to fit the screen */
   border-radius: 10px; /* Optional: Add rounded edges */
 }
 
