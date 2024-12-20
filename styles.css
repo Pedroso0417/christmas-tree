@@ -11,6 +11,46 @@ body {
   overflow: hidden;
 }
 
+.image {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7) rgba(46, 47, 66, 0.7)
+    ),
+    url(./image/Photo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding-top: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 0.5s;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -54,10 +94,11 @@ h1 {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 10px;
+  margin-bottom: 10px;
   font-size: 1.2rem;
   border: none;
-  background: #e74c3c;
+  background: gold;
   color: white;
   cursor: pointer;
   border-radius: 5px;
@@ -65,30 +106,37 @@ button {
 }
 
 button:hover {
-  background: #c0392b;
+  background: red;
 }
 
 /* Sparkling lights */
-@keyframes sparkle {
-  0% {
-    transform: translate(-50%, -50%) scale(0.5);
+@keyframes fadeIn {
+  from {
     opacity: 0.8;
+    transform: scale(0.9);
+    /* transform: translate(-50%, -50%) scale(0.5); */
   }
-  50% {
-    transform: translate(-50%, -50%) scale(1.2);
+  to {
+    /* transform: translate(-50%, -50%) scale(1.2); */
+    opacity: 1;
+    transform: scale(0.5);
+  }
+}
+@keyframes sparkle-animation {
+  0% {
+    transform: scale(0.5);
     opacity: 1;
   }
   100% {
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 0.8;
+    transform: scale(0.2);
+    opacity: 0;
   }
 }
-
 .tenor-gif-embed {
   margin: 20px auto;
   display: flex;
   justify-content: center;
-  max-width: 70%; /* Limit the width to fit the screen */
+  max-width: 60%; /* Limit the width to fit the screen */
   border-radius: 10px; /* Optional: Add rounded edges */
 }
 
