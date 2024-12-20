@@ -35,7 +35,7 @@ body {
   align-items: center;
 }
 
-.modal-content {
+.modalContent {
   background: white;
   padding-top: 10px;
   padding: 20px;
@@ -98,7 +98,7 @@ button {
   margin-bottom: 10px;
   font-size: 1.2rem;
   border: none;
-  background: gold;
+  background:gold;
   color: white;
   cursor: pointer;
   border-radius: 5px;
