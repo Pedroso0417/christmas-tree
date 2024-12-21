@@ -49,19 +49,21 @@ button.disabled = false;
 const meteorContainer = document.querySelector(".meteor-container");
 function createMeteor() {
   if (!meteorContainer) return;
-  const meteor = document.createElement("div");
-  meteor.classList.add("meteor");
+  for (let i = 0; i < 100; i++) {
+    const meteor = document.createElement("div");
+    meteor.classList.add("meteor");
 
-  meteor.style.top = `${Math.random() * 100}vh`;
-  meteor.style.left = `${Math.random() * 100}vw`;
-  meteor.style.width = `${Math.random() * 10 + 10}px`;
-  meteor.style.height = `${Math.random() * 60 + 40}px`;
+    meteor.style.top = `${Math.random() * 100}vh`;
+    meteor.style.right = `${Math.random() * 100}vw`;
+    meteor.style.width = `${Math.random() * 2 + 2}px`;
+    meteor.style.height = `${Math.random() * 6 + 4}px`;
 
-  meteorContainer.appendChild(meteor);
+    meteorContainer.appendChild(meteor);
 
-  setTimeout(() => {
-    meteor.remove();
-  }, 3000);
+    setTimeout(() => {
+      meteor.remove();
+    }, 5000);
+  }
 }
 
 setInterval(createMeteor, 500);
