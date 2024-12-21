@@ -5,7 +5,6 @@ const christmasSong = document.getElementById("christmasSong");
 const modal = document.getElementById("myModal");
 const openModalButton = document.getElementById("openModalButton");
 const closeButton = document.querySelector(".close-button");
-
 button.addEventListener("click", () => {
   message.style.opacity = "1";
   christmasSong.play();
@@ -47,6 +46,25 @@ window.addEventListener("click", (e) => {
 });
 button.disabled = false;
 
+const meteorContainer = document.querySelector(".meteor-container");
+function createMeteor() {
+  if (!meteorContainer) return;
+  const meteor = document.createElement("div");
+  meteor.classList.add("meteor");
+
+  meteor.style.top = `${Math.random() * 100}vh`;
+  meteor.style.left = `${Math.random() * 100}vw`;
+  meteor.style.width = `${Math.random() * 10 + 10}px`;
+  meteor.style.height = `${Math.random() * 60 + 40}px`;
+
+  meteorContainer.appendChild(meteor);
+
+  setTimeout(() => {
+    meteor.remove();
+  }, 3000);
+}
+
+setInterval(createMeteor, 500);
 // christmasSong.addEventListener("ended", () => {
 //   message.style.opacity = "0";
 //   button.disabled = false;
