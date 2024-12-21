@@ -16,14 +16,15 @@ button.addEventListener("click", () => {
     sparkle.className = "sparkle";
     sparkle.style.top = `${Math.random() * 100}%`;
     sparkle.style.left = `${Math.random() * 100}%`;
-    sparkle.style.width = "${Math.random() * 5 + 5}px";
+    sparkle.style.width = `${Math.random() * 5 + 5}px`; // Correct
     sparkle.style.height = sparkle.style.width;
 
-    // add random color/
     const color = ["#FF4500", "#ADFF2F", "#87CEEB", "#FF79B4"];
+    sparkle.style.backgroundColor =
+      color[Math.floor(Math.random() * color.length)];
 
-    sparkle.style.backgroundColor = colors[Math.random() * color.length];
-    sparkle.style.backShadow = "0 0 8px 2px ${sparkle.style.backgroundColor}";
+    // add random color/
+    sparkle.style.boxShadow = `0 0 8px 2px ${sparkle.style.backgroundColor}`;
     // sparkle.style.animationDelay = `${Math.random() * 2}s`;
     sparklesContainer.appendChild(sparkle);
 
@@ -39,11 +40,13 @@ closeButton.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-window.addEventListener("click", () => {
+window.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.style.display = "none";
   }
 });
+button.disabled = false;
+
 // christmasSong.addEventListener("ended", () => {
 //   message.style.opacity = "0";
 //   button.disabled = false;

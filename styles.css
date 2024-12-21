@@ -1,28 +1,18 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background: linear-gradient(
-    to bottom,
-    #001f3f,
-    #0074d9
-  ); /* Night sky to cool blue */
-  color: white;
-  text-align: center;
-  overflow: hidden;
-}
-
-.image {
   padding-top: 188px;
   padding-bottom: 188px;
-  background-image: linear-gradient(
-      to right,
-      rgba(46, 47, 66, 0.7) rgba(46, 47, 66, 0.7)
-    ),
-    url(./image/Photo.jpg);
+  background-image: url("./images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align: center;
+  color: #f9f9f9;
+  font-size: 3rem;
+  cursor: pointer;
 }
+
 .modal {
   display: none;
   position: fixed;
@@ -60,7 +50,7 @@ body {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   opacity: 0;
   transform: translateY(-50px);
   transition: all 1s ease-in-out;
@@ -98,7 +88,7 @@ button {
   margin-bottom: 10px;
   font-size: 1.2rem;
   border: none;
-  background:gold;
+  background: gold;
   color: white;
   cursor: pointer;
   border-radius: 5px;
