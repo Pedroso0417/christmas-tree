@@ -194,15 +194,13 @@ button:hover {
 .tenor-gif-embed {
   display: flex;
   justify-content: center;
-  max-width: 70%; /* Limit the width to fit the screen */
+  max-width: 80%; /* Limit the width to fit the screen */
   border-radius: 10px; /* Optional: Add rounded edges */
   @media screen and (min-width: 428px) {
-    margin-left: 35px;
-    margin: auto;
+    margin-left: 42px;
     margin-bottom: 10px;
     padding-top: auto;
     display: flex;
-    text-align: center;
     justify-content: center;
   }
   @media screen and (min-width: 768px) {
