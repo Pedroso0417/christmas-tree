@@ -5,45 +5,25 @@ body {
   font-size: 3rem;
   text-align: center;
   cursor: pointer;
-  background-image: url("./images/background.jpg"),
-    url(./images/background.m.jpg),
-    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, center;
-  background-size: cover, cover;
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(./images/background.jpg),
-      url(./images/background.m@2x.jpg),
-      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
-  }
+  background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+  background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  body {
     padding: 112px 0;
-    background-image: url(./images/background.t.jpg),
-      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(./images/background.t@2x.jpg),
-        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
-    }
+    background-image: url(./images/background.t.jpg);
   }
+}
 
-  @media screen and (min-width: 1158px) {
+@media screen and (min-width: 1158px) {
+  body {
     padding: 188px 0;
-    background-image: url(./images/background.d.jpg),
-      linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
-    background-size: 1440px, 1440px;
-
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      background-image: url(./images/background.d@2x.jpg),
-        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
-    }
+    background-image: url(./images/background.d.jpg);
+    background-size: 1440px;
   }
 }
 
@@ -96,7 +76,7 @@ body {
 
 h1 {
   font-size: 2rem;
-  padding: 0; 
+  padding: 0;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -140,15 +120,15 @@ h1 {
   } */
 }
 .countdown-container {
-text-align: center;
-margin: 20px auto;
-color: black;
-background: rgba(0, 0, 0, 0.7);
-padding: 20px;
-border-radius: 10px;
-max-width: 400px;
-font-family: sans-serif;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 20px auto;
+  color: black;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  font-family: sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .countdown {
   font-size: 2rem;
@@ -189,28 +169,24 @@ button:hover {
 }
 
 /* Sparkling lights */
-@keyframes fadeIn {
-  from {
-    opacity: 0.8;
-    transform: scale(0.9);
-    /* transform: translate(-50%, -50%) scale(0.5); */
-  }
-  to {
-    /* transform: translate(-50%, -50%) scale(1.2); */
-    opacity: 1;
-    transform: scale(0.5);
-  }
+
+.sparkle {
+  position: absolute;
+  border-radius: 50%;
+  animation: fadeOut 5s linear;
 }
-@keyframes sparkle-animation {
+
+@keyframes fadeOut {
   0% {
-    transform: scale(0.5);
     opacity: 1;
+    transform: scale(1);
   }
   100% {
-    transform: scale(0.2);
     opacity: 0;
+    transform: scale(0);
   }
 }
+
 .tenor-gif-embed {
   display: flex;
   justify-content: center;

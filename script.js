@@ -67,9 +67,10 @@ function createMeteor() {
   }
 }
 setInterval(createMeteor, 500);
+
 function updateCountdown() {
   const now = new Date();
-  const christmas = new date(now.GetFullYear(), 11, 25);
+  const christmas = new date(now.getFullYear(), 12, 25);
   if (now > christmas) {
     christmas.setFullYear(now.getFullYear() + 1);
   }
@@ -77,18 +78,18 @@ function updateCountdown() {
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor(diff % (1000 * 60)) / 1000;
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
   document.getElementById("days").textContent = days
     .toString()
     .padStart(2, "0");
-  document.getElementById("days").textContent = hours
+  document.getElementById("hours").textContent = hours
     .toString()
     .padStart(2, "0");
-  document.getElementById("days").textContent = minutes
+  document.getElementById("minutes").textContent = minutes
     .toString()
     .padStart(2, "0");
-  document.getElementById("days").textContent = seconds
+  document.getElementById("seconds").textContent = seconds
     .toString()
     .padStart(2, "0");
 }
