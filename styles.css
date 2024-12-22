@@ -95,8 +95,8 @@ body {
 }
 
 h1 {
-  font-size: 4rem;
-  opacity: 0;
+  font-size: 2rem;
+  padding: 0; 
   display: flex;
   text-align: center;
   justify-content: center;
@@ -139,7 +139,27 @@ h1 {
     justify-content: center;
   } */
 }
+.countdown-container {
+text-align: center;
+margin: 20px auto;
+color: black;
+background: rgba(0, 0, 0, 0.7);
+padding: 20px;
+border-radius: 10px;
+max-width: 400px;
+font-family: sans-serif;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.countdown {
+  font-size: 2rem;
+  font-weight: bold;
+}
 
+.countdown span {
+  display: inline-block;
+  margin: 0 10px;
+  color: #f39c12;
+}
 .sparkles::after {
   content: "";
   position: absolute;
@@ -194,10 +214,11 @@ button:hover {
 .tenor-gif-embed {
   display: flex;
   justify-content: center;
-  max-width: 80%; /* Limit the width to fit the screen */
+  align-items: center;
+  max-width: 40%; /* Limit the width to fit the screen */
   border-radius: 50px; /* Optional: Add rounded edges */
-  margin-left: 43px;
-  margin-bottom: 20px ;
+  margin-left: 266px;
+  margin-bottom: 20px;
   padding-top: 0 auto;
   /* @media screen and (min-width: 428px) {
     margin-left: 42px;
