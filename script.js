@@ -70,7 +70,7 @@ setInterval(createMeteor, 500);
 
 function updateCountdown() {
   const now = new Date();
-  const christmas = new date(now.getFullYear(), 12, 25);
+  const christmas = new Date(now.getFullYear(), 11, 22);
   if (now > christmas) {
     christmas.setFullYear(now.getFullYear() + 1);
   }
