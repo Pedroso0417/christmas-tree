@@ -69,7 +69,7 @@ function createMeteor() {
 setInterval(createMeteor, 500);
 
 function startOneDayCountdown() {
-  const targetTime = new Date().getTime() + 8 * 60 * 60 * 1000;
+  const targetTime = new Date().getTime() + 9 * 60 * 60 * 1000;
   const interval = setInterval(() => {
     const now = new Date().getTime();
     const diff = targetTime - now;
