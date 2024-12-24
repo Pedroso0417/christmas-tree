@@ -12,7 +12,7 @@ body {
   background-size: cover;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   body {
     padding: 112px 0;
     background-image: url(./images/background.t.jpg);
@@ -25,7 +25,7 @@ body {
     background-image: url(./images/background.d.jpg);
     background-size: 1440px;
   }
-}
+} */
 
 .modal {
   display: none;
@@ -70,7 +70,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   flex-direction: column;
 }
 
@@ -119,16 +118,14 @@ h1 {
     justify-content: center;
   } */
 }
-.countdown-container {
+.count-container {
   text-align: center;
-  margin: 20px auto;
-  color: black;
+  margin: 10px;
   background: rgba(0, 0, 0, 0.7);
-  padding: 20px;
   border-radius: 10px;
-  max-width: 400px;
+  /* max-width: 400px; */
   font-family: sans-serif;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
 }
 .countdown {
   font-size: 2rem;
@@ -193,30 +190,21 @@ button:hover {
   align-items: center;
   max-width: 40%; /* Limit the width to fit the screen */
   border-radius: 50px; /* Optional: Add rounded edges */
-  margin-left: 266px;
+  /* margin-left: 266px; */
   margin-bottom: 20px;
   padding-top: 0 auto;
-  /* @media screen and (min-width: 428px) {
-    margin-left: 42px;
+   @media screen and (min-width: 428px) {
+    margin-left: 124px;
     margin-bottom: 10px;
     padding-top: auto;
     display: flex;
     justify-content: center;
   }
-  @media screen and (min-width: 768px) {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ 
+  @media screen and (min-width: 1128px) {
+    display:flex;
+    margin:auto;
   }
-  @media screen and (min-width: 1158px) {
-    margin: auto;
-    margin-bottom: 10px;
-    padding-top: 0 auto;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-  } */
 }
 
 #audioContainer {
