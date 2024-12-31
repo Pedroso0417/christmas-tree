@@ -67,34 +67,61 @@ function createMeteor() {
   }
 }
 setInterval(createMeteor, 500);
+function updateCountdown() {
+  const now = new Date();
+  const nextYear = 2025;
+  const newYear = new Date(nextYear, 0, 1); // January 1, 2025
+  const diff = newYear - now;
 
-function startOneDayCountdown() {
-  const targetTime = new Date().getTime() + 9 * 60 * 60 * 1000;
-  const interval = setInterval(() => {
-    const now = new Date().getTime();
-    const diff = targetTime - now;
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(diff / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    if (diff <= 0) {
-      document.getElementById("countdown").innerHTML = "Time's up!";
-      clearInterval(interval);
-      return;
-    }
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  document.getElementById("days").textContent = days
+    .toString()
+    .padStart(2, "0");
 
-    document.getElementById("hours").textContent = hours
-      .toString()
-      .padStart(2, "0");
-    document.getElementById("minutes").textContent = minutes
-      .toString()
-      .padStart(2, "0");
-    document.getElementById("seconds").textContent = seconds
-      .toString()
-      .padStart(2, "0");
-  }, 100);
+  document.getElementById("hours").textContent = hours
+    .toString()
+    .padStart(2, "0");
+  document.getElementById("minutes").textContent = minutes
+    .toString()
+    .padStart(2, "0");
+  document.getElementById("seconds").textContent = seconds
+    .toString()
+    .padStart(2, "0");
 }
-startOneDayCountdown();
+setInterval(updateCountdown, 1000);
+updateCountdown();
+// count down
+// function startOneDayCountdown() {
+//   const targetTime = new Date().getTime() + 9 * 60 * 60 * 1000;
+//   const interval = setInterval(() => {
+//     const now = new Date().getTime();
+//     const diff = targetTime - now;
+
+//     if (diff <= 0) {
+//       document.getElementById("countdown").innerHTML = "Time's up!";
+//       clearInterval(interval);
+//       return;
+//     }
+//     const hours = Math.floor(diff / (1000 * 60 * 60));
+//     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+//     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+//     document.getElementById("hours").textContent = hours
+//       .toString()
+//       .padStart(2, "0");
+//     document.getElementById("minutes").textContent = minutes
+//       .toString()
+//       .padStart(2, "0");
+//     document.getElementById("seconds").textContent = seconds
+//       .toString()
+//       .padStart(2, "0");
+//   }, 100);
+// }
+// startOneDayCountdown();
 
 // christmasSong.addEventListener("ended", () => {
 //   message.style.opacity = "0";
